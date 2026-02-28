@@ -7,12 +7,55 @@
 /* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+
+.form {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 36px;
+  margin-bottom: 30px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+
+}
+
+img {
+  display: block;
+}
+
+.gallery-img {
+  width: 360px;
+  height: 200px;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list-ue {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px;
+  border: 2px;
+}
+
+.item-title {
+  font-size: 16px;
+  text-align: center;
+}
+
+.item-value {
+  font-size: 14px;
+  text-align: center;
+}
