@@ -5,7 +5,7 @@ import "simplelightbox/dist/simple-lightbox.min.css";
 
 const gallery = document.querySelector(".gallery");
 const loader = document.querySelector(".loader");
-
+const loadMoreBtn = document.querySelector(".btn");
 
 const galleryBox = new SimpleLightbox('.gallery a', {
   captions: true,
