@@ -73,20 +73,13 @@ async function handleSubmit(event) {
 
 
 async function handleLoadMore() {
-    hideLoadMoreButton();
+    
   try {
     page += 1;
     showLoader();
     const response = await getImagesByQuery(currentQuery, page);
 
-    if (response.hits.length === 0) {
-      hideLoadMoreButton();
-      iziToast.show({
-        message: "We're sorry, but you've reached the end of search results."
-      });
-      return;
-    }
-      createGallery(response.hits);
+          createGallery(response.hits);
       
     const card = document.querySelector(".gallery-item");
     if (card) {
@@ -98,10 +91,12 @@ async function handleLoadMore() {
     }
 
     
-    if (page * 15 >= totalHits) {
+    if (page * 15 < totalHits) {
       showLoadMoreButton();
+    } else {
+      hideLoadMoreButton();
       iziToast.show({
-        message: "We're sorry, but you've reached the end of search results."
+        message: "We're sorry, but you've reached the end of search results.",
       });
     }
 
