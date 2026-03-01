@@ -76,6 +76,7 @@ async function handleLoadMore() {
     
   try {
     page += 1;
+    hideLoadMoreButton();
     showLoader();
     const response = await getImagesByQuery(currentQuery, page);
 
@@ -109,4 +110,5 @@ async function handleLoadMore() {
     hideLoader();
   }
 }
+
  
